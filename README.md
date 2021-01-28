@@ -7,4 +7,4 @@
 - `SOCKETIOIP` global stores the socket.io server IP
 
 ## Server
-- It defaults run on port 5000 unless `process.env.PORT` is specified
+- It defaults run on port 8080 unless `process.env.PORT` is specified
