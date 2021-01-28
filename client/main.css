@@ -1,0 +1,85 @@
+:root {
+  --theme-black: #111;
+}
+
+html,
+body {
+  max-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 1rem;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1 1 0%;
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--theme-black);
+  box-shadow: 4px 6px var(--theme-black);
+}
+
+.messages {
+  flex: 1;
+  padding: 0.5rem;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+  overflow: auto;
+}
+
+custom-message[sent] + custom-message[received],
+custom-message[received] + custom-message[sent] {
+  margin-top: 1rem;
+}
+
+#message {
+  flex: 1;
+}
+#username {
+  flex-basis: 20%;
+  min-width: 8rem;
+}
+
+.controls {
+  display: flex;
+  height: 5rem;
+  border-top: 1px solid var(--theme-black);
+}
+
+.controls .message {
+  flex: 1;
+}
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (min-width: 765px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  html {
+    font-size: 125%;
+  }
+}
